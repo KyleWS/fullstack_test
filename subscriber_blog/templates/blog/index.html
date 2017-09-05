@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<html>
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+<h1><a href="{% url 'index' %}">Home</a> <a href="{% url 'resume' %}">Resume</a></h1>
+<hr>
+{% if post_list %}
+	<ul>
+	{% for post in post_list %}
+		<li>{{ post.content }}</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<h2>no posts</h2>
+{% endif %}
+</html>

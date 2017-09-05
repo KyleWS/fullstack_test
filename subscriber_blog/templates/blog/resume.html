@@ -1,0 +1,8 @@
+<html>
+{% load staticfiles %}
+<link rel='stylesheet' type='text/css' href="{% static "blog/resume.css" %}" />
+<h1><a href="{% url 'index' %}">Home</a> <a href="{% url 'resume' %}">Resume</a></h1>
+<hr>
+<p>{{content}}</p>
+<img src="{% static "blog/images/cat.jpg" %}" alt="cat image" />
+</html>
