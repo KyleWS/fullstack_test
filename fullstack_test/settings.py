@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['fullstack-test-development.cqppkr2mkf.us-west-2.elasticbeansta
 # Application definition
 
 INSTALLED_APPS = [
+    'webpack_loader',
     'subscriber_blog.apps.SubscriberBlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -118,6 +119,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
 STATIC_ROOT = "www/static/"
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'assets'),
+)
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+    }
+}

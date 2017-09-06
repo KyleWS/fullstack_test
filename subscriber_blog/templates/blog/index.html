@@ -1,7 +1,8 @@
+{% load render_bundle from webpack_loader %}
 {% load staticfiles %}
 <html>
 <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
-<h1><a href="{% url 'index' %}">Home</a> <a href="{% url 'resume' %}">Resume</a></h1>
+<h1><a href="{% url 'index' %}">Home!!!</a> <a href="{% url 'resume' %}">Resume</a></h1>
 <hr>
 {% if post_list %}
 	<ul>
@@ -12,4 +13,12 @@
 {% else %}
 	<h2>no posts</h2>
 {% endif %}
+
+<div id="container">
+	React did not load
+</div>
+<div>
+	React Above?
+</div>
+{% render_bundle 'main' %}
 </html>

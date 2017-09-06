@@ -3,3 +3,9 @@
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+# npm, webpack
+node_modules/*
+webpack-stats.json
+assets/bundles.*
+subscriber_blog/__pycache__/*
