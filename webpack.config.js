@@ -38,6 +38,6 @@ module.exports = {
 	},
 	resolve: {
 		moduleExtensions: ['node_modules'],
-		extensions: ['', '.js', '.jsx']
+		extensions: ['.js', '.jsx']
 	}
 }
